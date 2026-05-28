@@ -31,8 +31,14 @@ def extract_nda(text: str):
 
     raw = response.content[0].text
 
+    # strip markdown code fences the model sometimes wraps the JSON in
+    cleaned = raw.strip()
+    if cleaned.startswith("```"):
+        cleaned = cleaned.split("\n", 1)[-1]
+        cleaned = cleaned.rsplit("```", 1)[0].strip()
+
     try:
-        result = json.loads(raw)
+        result = json.loads(cleaned)
     except Exception:
         result = {
             "error": "invalid_json",
