@@ -53,6 +53,9 @@ htmlcov/
 # --- IDEs ---
 .vscode/
 .idea/
+.cursor/
+.claude/
+.code/
 *.suo
 *.ntvs*
 *.njsproj
