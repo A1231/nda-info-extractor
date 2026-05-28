@@ -1,0 +1,69 @@
+# Environment variables (contains Anthropic API keys)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Sensitive NDA PDF files
+*.pdf
+input/
+uploads/
+
+# Extracted JSON output (may contain sensitive NDA data)
+output/
+*.extracted.json
+results/
+
+# --- Node / React ---
+node_modules/
+build/
+dist/
+.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# --- Python backend ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+*.egg
+venv/
+.venv/
+env/
+.env/
+pip-log.txt
+pip-delete-this-directory.txt
+.Python
+
+# --- Testing ---
+coverage/
+.coverage
+htmlcov/
+.pytest_cache/
+*.lcov
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Misc ---
+*.log
+.cache/
